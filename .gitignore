@@ -1,0 +1,16 @@
+/fontend/
+/.vscode/
+/src/AuctionService/bin
+/src/AuctionService/obj
+
+/src/Contracts/bin
+/src/Contracts/obj
+
+/src/GatewayService/bin
+/src/GatewayService/obj
+
+/src/IdentityService/bin
+/src/IdentityService/obj
+
+/src/SearchService/bin
+/src/SearchService/obj
