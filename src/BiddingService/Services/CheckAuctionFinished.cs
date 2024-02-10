@@ -1,10 +1,5 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Contracts;
 using MassTransit;
-using MassTransit.Transports;
 using MongoDB.Entities;
 
 namespace BiddingService.Services
@@ -55,7 +50,7 @@ namespace BiddingService.Services
                     ItemSold = winingBid != null,
                     AuctionId = auction.ID,
                     Winner = winingBid?.Bidder,
-                    Amount = winingBid.Amount,
+                    Amount = winingBid != null ? winingBid.Amount : 0,
                     Seller = auction.Seller
                 });
             }
