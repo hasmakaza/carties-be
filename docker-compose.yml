@@ -83,10 +83,10 @@ services:
       dockerfile: src/IdentityService/Dockerfile
     environment:
       - ASPNETCORE_ENVIRONMENT=Docker
-      - ASPNETCORE_URLS=http://+:80;
+      - ASPNETCORE_URLS=http://+:80
+      - ClientApp=http://app.carstiestest.com
       - ConnectionStrings__DefaultConnection=Server=postgres:5432;Database=identity;User Id=sa;Password=12345
-    ports:
-      - 80:80
+      - VIRTUAL_HOST=id.carstiestest.com
     depends_on:
       - postgres
     networks:
@@ -99,9 +99,9 @@ services:
       dockerfile: src/GatewayService/Dockerfile
     environment:
       - ASPNETCORE_ENVIRONMENT=Docker
-      - ASPNETCORE_URLS=http://+:80;
-    ports:
-      - 6001:80
+      - ASPNETCORE_URLS=http://+:80
+      - ClientApp=https://app.carstiestest.com
+      - VIRTUAL_HOST=api.carstiestest.com
     networks:
       custom:
   bid-svc:
@@ -145,16 +145,27 @@ services:
       dockerfile: fontend/web-app/Dockerfile
     volumes:
       - /var/lib/web/data
-    ports:
-      - 3000:3000
     extra_hosts:
       - id.carstiestest.com:10.5.0.200
     environment:
       - NEXTAUTH_SECRET=somgthingreallyreallysecret
-      - NEXTAUTH_URL=http://localhost:3000
+      - NEXTAUTH_URL=http://app.carstiestest.com
       - NEXTAUTH_URL_INTERNAL=http://web-app:3000
       - API_URL=http://gateway-svc
       - ID_URL=http://id.carstiestest.com
       - NEXT_PUBLIC_NOTIFY_URL=http://gateway-svc/notifications
+      - VIRTUAL_HOST=app.carstiestest.com
+      - VIRTUAL_PORT=3000 
     networks:
       custom:
+  nginx-proxy:
+    image: nginxproxy/nginx-proxy
+    ports:
+      - 80:80
+      - 443:443
+    networks:
+      custom:
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock
+      - ./devcerts:/etc/nginx/certs
+
