@@ -14,15 +14,21 @@ public class BidPlacedConsumer : IConsumer<BidPlaced>
 
     public async Task Consume(ConsumeContext<BidPlaced> context)
     {
-       Console.WriteLine("--> Consuming bid placed");
-       var auction = await _dbContext.Auctions.FindAsync(Guid.Parse(context.Message.AuctionId));
-       if(auction is null) return;
-       if(auction.CurrentHighBid == null 
-       || context.Message.BidStatus.Contains("Accepted") 
-       && context.Message.Amount > auction.CurrentHighBid)
-       {
-           auction.CurrentHighBid = context.Message.Amount;
-           await _dbContext.SaveChangesAsync();
-       }
+        Console.WriteLine("--> Consuming bid placed");
+        var auction = await _dbContext.Auctions.FindAsync(Guid.Parse(context.Message.AuctionId));
+        if (auction is null)
+        {
+            return;
+        }
+        else
+        {
+            if (auction.CurrentHighBid == null
+           || context.Message.BidStatus.Contains("Accepted")
+           && context.Message.Amount > auction.CurrentHighBid)
+            {
+                auction.CurrentHighBid = context.Message.Amount;
+                await _dbContext.SaveChangesAsync();
+            }
+        }
     }
 }

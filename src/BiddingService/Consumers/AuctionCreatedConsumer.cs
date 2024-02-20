@@ -10,7 +10,7 @@ public class AuctionCreatedConsumer : IConsumer<AuctionCreated>
     {
        var auction = new Auction{
             ID = context.Message.Id.ToString(),
-            Seller = context.Message.Seller,
+            Seller = context.Message.Seller ?? "",
             AuctionEnd = context.Message.AuctionEnd,
             ReservePrice = context.Message.ReservePrice
        };

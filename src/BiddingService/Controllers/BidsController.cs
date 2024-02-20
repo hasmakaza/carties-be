@@ -33,7 +33,10 @@ public class BidsController : ControllerBase
             auction = _grpcAuctionClient.GetAuction(auctionId);
             if(auction == null) return BadRequest("Cannot accept bids on this auction at this time.");    
         }
-        if (auction.Seller == User?.Identity?.Name)
+        if(User == null || User.Identity == null || User.Identity.Name == null){
+            return BadRequest("User must be login");
+        }
+        if (auction.Seller == User.Identity.Name)
         {
             return BadRequest("You cannot bid on your own auction.");
         }
@@ -41,7 +44,7 @@ public class BidsController : ControllerBase
         {
             AuctionId = auctionId,
             Amount = amount,
-            Bidder = User.Identity.Name
+            Bidder = User.Identity.Name 
         };
         if (auction.AuctionEnd < DateTime.UtcNow)
         {

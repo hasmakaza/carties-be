@@ -14,11 +14,11 @@ namespace AuctionService;
 public class AuctionsController : ControllerBase
 {
 
-    private readonly AuctionDbcontext _dbContext;
+    private readonly IAuctionRepository _dbContext;
     private readonly IMapper _mapper;
     private readonly IPublishEndpoint _publisheEndpoint;
 
-    public AuctionsController(AuctionDbcontext dbContext, IMapper mapper, IPublishEndpoint publisheEndpoint)
+    public AuctionsController(IAuctionRepository dbContext, IMapper mapper, IPublishEndpoint publisheEndpoint)
     {
         _dbContext = dbContext;
         _mapper = mapper;
@@ -27,27 +27,17 @@ public class AuctionsController : ControllerBase
     [HttpGet]
     public async Task<ActionResult<List<AuctionDto>>> GetAllAuctions(string? date)
     {
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
-        var query = _dbContext.Auctions.OrderBy(_ => _.Item.Make).AsQueryable();
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
-
-        if (!string.IsNullOrEmpty(date))
-        {
-            query = query.Where(x => x.UpdatedAt.CompareTo(DateTime.Parse(date).ToUniversalTime()) > 0);
-        }
-        return await query.ProjectTo<AuctionDto>(_mapper.ConfigurationProvider).ToListAsync();
+        return await _dbContext.GetAuctionAsync(date);
     }
     [HttpGet("{id}")]
     public async Task<ActionResult<AuctionDto>> GetAuctionById(Guid id)
     {
-        var result = await _dbContext.Auctions
-                    .Include(c => c.Item)
-                    .SingleOrDefaultAsync(x => x.Id == id);
-        if (result == null)
+        var auction = await _dbContext.GetAuctionByIdAsync(id);
+        if (auction == null)
         {
             return NotFound();
         }
-        return Ok(_mapper.Map<AuctionDto>(result));
+        return auction;
     }
     [Authorize]
     [HttpPost]
@@ -58,13 +48,13 @@ public class AuctionsController : ControllerBase
         {
             auction.Seller = User.Identity.Name;
         }
-        _dbContext.Add(auction);
+        _dbContext.AddAuction(auction);
 
         var newAuction = _mapper.Map<AuctionDto>(auction);
 
         await _publisheEndpoint.Publish(_mapper.Map<AuctionCreated>(newAuction));
 
-        var result = await _dbContext.SaveChangesAsync() > 0;
+        var result = await _dbContext.SaveChangesAsync();
 
         if (!result) return BadRequest();
 
@@ -74,9 +64,7 @@ public class AuctionsController : ControllerBase
     [HttpPut("{id}")]
     public async Task<ActionResult<AuctionDto>> UpdateAuction([FromRoute] Guid id, [FromBody] UpdateAuctionDto updateAuctionDto)
     {
-        var auction = await _dbContext.Auctions
-                            .Include(a => a.Item)
-                            .FirstOrDefaultAsync(a => a.Id == id);
+        var auction = await _dbContext.GetAuctionEntityByIdAsync(id);
         if (auction == null)
         {
             return NotFound();
@@ -91,8 +79,7 @@ public class AuctionsController : ControllerBase
             auction.Item.Year = updateAuctionDto.Year ?? auction.Item.Year;
         }
         await _publisheEndpoint.Publish(_mapper.Map<AuctionUpdated>(auction));
-        _dbContext.Update(auction);
-        var result = await _dbContext.SaveChangesAsync() > 0;
+        var result = await _dbContext.SaveChangesAsync();
         if (!result)
         {
             return BadRequest("Problem saving change");
@@ -103,15 +90,15 @@ public class AuctionsController : ControllerBase
     [HttpDelete("{id}")]
     public async Task<ActionResult> DeleteAuction(Guid id)
     {
-        var auction = await _dbContext.Auctions.FindAsync(id);
+        var auction = await _dbContext.GetAuctionEntityByIdAsync(id);
         if (auction == null)
         {
             return NotFound();
         }
         if (User.Identity is not null && auction.Seller != User.Identity.Name) return Forbid();
-        _dbContext.Remove(auction);
+        _dbContext.RemoveAuction(auction);
         await _publisheEndpoint.Publish<AuctionDeleted>(new { Id = auction.Id.ToString() });
-        var result = await _dbContext.SaveChangesAsync() > 0;
+        var result = await _dbContext.SaveChangesAsync();
         if (!result)
         {
             return BadRequest("Problem saving change");

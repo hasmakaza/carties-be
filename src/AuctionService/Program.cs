@@ -39,8 +39,8 @@ builder.Services.AddMassTransit(x =>
     {
         cfg.Host(builder.Configuration["RabbitMQ:Host"], "/", h =>
         {
-            h.Username(builder.Configuration.GetValue("RabbitMQ:Username","guest"));
-            h.Password(builder.Configuration.GetValue("RabbitMQ:Password","guest"));
+            h.Username(builder.Configuration.GetValue("RabbitMQ:Username", "guest"));
+            h.Password(builder.Configuration.GetValue("RabbitMQ:Password", "guest"));
         });
         cfg.ConfigureEndpoints(context);
     });
@@ -53,8 +53,11 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
         option.TokenValidationParameters.ValidateAudience = false;
         option.TokenValidationParameters.NameClaimType = "username";
     });
+builder.Services.AddScoped<IAuctionRepository, AuctionRepository>();
 builder.Services.AddGrpc();
+
 var app = builder.Build();
+
 app.UseAuthentication();
 app.UseAuthorization();
 
@@ -69,3 +72,5 @@ catch (Exception ex)
     Console.WriteLine($"Fail to seeddate {ex.Message}");
 }
 app.Run();
+
+public partial class Program { }

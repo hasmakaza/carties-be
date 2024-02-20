@@ -14,10 +14,10 @@ public class GrpcAuctionClient
         _config = config;
     }
 
-    public Auction GetAuction(string id)
+    public Auction? GetAuction(string id)
     {
         _logger.LogInformation("Calling GRPC Service");
-        var channel = GrpcChannel.ForAddress(_config["GrpcAuction"]);
+        var channel = GrpcChannel.ForAddress(_config["GrpcAuction"]!);
         var client = new GrpcAuction.GrpcAuctionClient(channel);
         var request = new GetAuctionRequest { Id = id };
         try{

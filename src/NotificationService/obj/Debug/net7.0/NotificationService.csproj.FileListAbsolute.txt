@@ -21,7 +21,6 @@ D:\workspace\Microservices\Carties\src\NotificationService\obj\Debug\net7.0\Noti
 D:\workspace\Microservices\Carties\src\NotificationService\obj\Debug\net7.0\NotificationService.AssemblyInfo.cs
 D:\workspace\Microservices\Carties\src\NotificationService\obj\Debug\net7.0\NotificationService.csproj.CoreCompileInputs.cache
 D:\workspace\Microservices\Carties\src\NotificationService\obj\Debug\net7.0\NotificationService.MvcApplicationPartsAssemblyInfo.cache
-D:\workspace\Microservices\Carties\src\NotificationService\obj\Debug\net7.0\NotificationService.sourcelink.json
 D:\workspace\Microservices\Carties\src\NotificationService\obj\Debug\net7.0\staticwebassets.build.json
 D:\workspace\Microservices\Carties\src\NotificationService\obj\Debug\net7.0\staticwebassets.development.json
 D:\workspace\Microservices\Carties\src\NotificationService\obj\Debug\net7.0\staticwebassets\msbuild.NotificationService.Microsoft.AspNetCore.StaticWebAssets.props
@@ -36,3 +35,4 @@ D:\workspace\Microservices\Carties\src\NotificationService\obj\Debug\net7.0\refi
 D:\workspace\Microservices\Carties\src\NotificationService\obj\Debug\net7.0\NotificationService.pdb
 D:\workspace\Microservices\Carties\src\NotificationService\obj\Debug\net7.0\NotificationService.genruntimeconfig.cache
 D:\workspace\Microservices\Carties\src\NotificationService\obj\Debug\net7.0\ref\NotificationService.dll
+D:\workspace\Microservices\Carties\src\NotificationService\obj\Debug\net7.0\NotificationService.sourcelink.json

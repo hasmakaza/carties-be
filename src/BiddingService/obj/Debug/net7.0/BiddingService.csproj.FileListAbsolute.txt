@@ -46,7 +46,6 @@ D:\workspace\Microservices\Carties\src\BiddingService\obj\Debug\net7.0\BiddingSe
 D:\workspace\Microservices\Carties\src\BiddingService\obj\Debug\net7.0\BiddingService.csproj.CoreCompileInputs.cache
 D:\workspace\Microservices\Carties\src\BiddingService\obj\Debug\net7.0\BiddingService.MvcApplicationPartsAssemblyInfo.cs
 D:\workspace\Microservices\Carties\src\BiddingService\obj\Debug\net7.0\BiddingService.MvcApplicationPartsAssemblyInfo.cache
-D:\workspace\Microservices\Carties\src\BiddingService\obj\Debug\net7.0\BiddingService.sourcelink.json
 D:\workspace\Microservices\Carties\src\BiddingService\obj\Debug\net7.0\staticwebassets.build.json
 D:\workspace\Microservices\Carties\src\BiddingService\obj\Debug\net7.0\staticwebassets.development.json
 D:\workspace\Microservices\Carties\src\BiddingService\obj\Debug\net7.0\staticwebassets\msbuild.BiddingService.Microsoft.AspNetCore.StaticWebAssets.props
@@ -69,3 +68,4 @@ D:\workspace\Microservices\Carties\src\BiddingService\bin\Debug\net7.0\Google.Pr
 D:\workspace\Microservices\Carties\src\BiddingService\bin\Debug\net7.0\Grpc.Core.Api.dll
 D:\workspace\Microservices\Carties\src\BiddingService\bin\Debug\net7.0\Grpc.Net.Client.dll
 D:\workspace\Microservices\Carties\src\BiddingService\bin\Debug\net7.0\Grpc.Net.Common.dll
+D:\workspace\Microservices\Carties\src\BiddingService\obj\Debug\net7.0\BiddingService.sourcelink.json
