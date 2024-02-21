@@ -5,6 +5,8 @@ using AuctionService.Services;
 using MassTransit;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Npgsql;
+using Polly;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -37,11 +39,18 @@ builder.Services.AddMassTransit(x =>
 
     x.UsingRabbitMq((context, cfg) =>
     {
+        cfg.UseMessageRetry(r =>
+        {
+            r.Handle<RabbitMqConnectionException>();
+            r.Interval(5, TimeSpan.FromSeconds(10));
+        });
+
         cfg.Host(builder.Configuration["RabbitMQ:Host"], "/", h =>
         {
             h.Username(builder.Configuration.GetValue("RabbitMQ:Username", "guest"));
             h.Password(builder.Configuration.GetValue("RabbitMQ:Password", "guest"));
         });
+
         cfg.ConfigureEndpoints(context);
     });
 });
@@ -63,14 +72,13 @@ app.UseAuthorization();
 
 app.MapControllers();
 app.MapGrpcService<GrpsAuctionService>();
-try
-{
-    DbInitializer.InitDb(app);
-}
-catch (Exception ex)
-{
-    Console.WriteLine($"Fail to seeddate {ex.Message}");
-}
+
+var retryPolicy = Policy
+    .Handle<NpgsqlException>()
+    .WaitAndRetry(5, retryAttempt => TimeSpan.FromSeconds(10));
+
+retryPolicy.ExecuteAndCapture(() => DbInitializer.InitDb(app));
+
 app.Run();
 
 public partial class Program { }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DjioDD0WnTF8e2x/H8MqlLtVaSiLLY4R/6pr5s3wQujWHdGBgidWSGz1gc2Y0Pj9AIhFGFQZC+AWFsBda6J5mg==",
+  "dgSpecHash": "ogNvhsDPrYmS4K4nb8pYvX0lTfAFqU1xjtXEV6oppgVUu9n+5HDyB6Au4WXIY2pXLZBJ3sBdmHpe17vxN2Yn8A==",
   "success": true,
   "projectFilePath": "D:\\workspace\\Microservices\\Carties\\tests\\AuctionService.IntegrationTests\\AuctionService.IntegrationTests.csproj",
   "expectedPackageFiles": [
@@ -27,6 +27,7 @@
     "C:\\Users\\leduc\\.nuget\\packages\\microsoft.aspnetcore.openapi\\7.0.14\\microsoft.aspnetcore.openapi.7.0.14.nupkg.sha512",
     "C:\\Users\\leduc\\.nuget\\packages\\microsoft.aspnetcore.testhost\\7.0.8\\microsoft.aspnetcore.testhost.7.0.8.nupkg.sha512",
     "C:\\Users\\leduc\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
+    "C:\\Users\\leduc\\.nuget\\packages\\microsoft.bcl.timeprovider\\8.0.0\\microsoft.bcl.timeprovider.8.0.0.nupkg.sha512",
     "C:\\Users\\leduc\\.nuget\\packages\\microsoft.codecoverage\\17.7.1\\microsoft.codecoverage.17.7.1.nupkg.sha512",
     "C:\\Users\\leduc\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\leduc\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.14\\microsoft.entityframeworkcore.7.0.14.nupkg.sha512",
@@ -83,6 +84,8 @@
     "C:\\Users\\leduc\\.nuget\\packages\\npgsql\\7.0.0\\npgsql.7.0.0.nupkg.sha512",
     "C:\\Users\\leduc\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\7.0.0\\npgsql.entityframeworkcore.postgresql.7.0.0.nupkg.sha512",
     "C:\\Users\\leduc\\.nuget\\packages\\nuget.frameworks\\6.5.0\\nuget.frameworks.6.5.0.nupkg.sha512",
+    "C:\\Users\\leduc\\.nuget\\packages\\polly\\8.3.0\\polly.8.3.0.nupkg.sha512",
+    "C:\\Users\\leduc\\.nuget\\packages\\polly.core\\8.3.0\\polly.core.8.3.0.nupkg.sha512",
     "C:\\Users\\leduc\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\portable.bouncycastle.1.9.0.nupkg.sha512",
     "C:\\Users\\leduc\\.nuget\\packages\\rabbitmq.client\\6.8.1\\rabbitmq.client.6.8.1.nupkg.sha512",
     "C:\\Users\\leduc\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
