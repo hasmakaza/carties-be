@@ -24,4 +24,4 @@ jobs:
         context: .
         file: src/IdentityService/Dockerfile
         push: true
-        tags: trycatchlearn/identity-svc:lastest
+        tags: duclnhse160643/identity-svc:lastest
