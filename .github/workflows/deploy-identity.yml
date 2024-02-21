@@ -4,7 +4,7 @@ on:
   workflow_dispath:
   push:
     branches: [ "main" ]
-    path:
+    paths:
      - 'src/IdentityService/**'
 
 jobs:
