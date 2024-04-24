@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5sxZpU6zdhBLZOqmuwURhFP2a3Xl+OGgJalSRqRXrmxIE8fUG+wHgp3lxxAGEX7tWAtNMOW/iw/YcrOY4D1JSw==",
+  "dgSpecHash": "a0kSQik+AhW3yOtYJPb0BpwD2JGeZ4wQufop0agBJxw2qooaEY6nDwc0cFls/QBeAfrYyJT2KC/y7x2GrKIBRA==",
   "success": true,
-  "projectFilePath": "D:\\workspace\\Microservices\\Carties\\tests\\AuctionService.UnitTests\\AuctionService.UnitTests.csproj",
+  "projectFilePath": "D:\\workspace\\C#\\Microservices\\Carties\\tests\\AuctionService.UnitTests\\AuctionService.UnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\leduc\\.nuget\\packages\\autofixture\\4.18.1\\autofixture.4.18.1.nupkg.sha512",
     "C:\\Users\\leduc\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",

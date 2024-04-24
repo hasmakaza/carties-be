@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HJyskfnIEQkrtjWpSeW8B6sLQMmiZA+u4IvbU/sjpjFb9OEhPvUBE1IxjlffNG3QmMnfSuPzb8z4T8S3dHInmw==",
+  "dgSpecHash": "dZZcnPQ1SrbtFcow81exIAQuDa3LPD+0ZOW8JroznzPf9VahmSN7FnU9HZ8TC7WGqIVE3yg2foOTbRDBmLqM9A==",
   "success": true,
-  "projectFilePath": "D:\\workspace\\Microservices\\Carties\\src\\NotificationService\\NotificationService.csproj",
+  "projectFilePath": "D:\\workspace\\C#\\Microservices\\Carties\\src\\NotificationService\\NotificationService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\leduc\\.nuget\\packages\\masstransit\\8.1.3\\masstransit.8.1.3.nupkg.sha512",
     "C:\\Users\\leduc\\.nuget\\packages\\masstransit.abstractions\\8.1.3\\masstransit.abstractions.8.1.3.nupkg.sha512",

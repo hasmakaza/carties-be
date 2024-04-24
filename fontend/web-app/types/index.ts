@@ -1,0 +1,41 @@
+export type PageResult<T> = {
+  results: T[];
+  pageCount: number;
+  totalCount: number;
+};
+
+export type Auction = {
+  createdAt: string;
+  updatedAt: string;
+  auctionEnd: string;
+  seller: string;
+  winner?: string;
+  make: string;
+  model: string;
+  year: number;
+  color: string;
+  mileage: number;
+  imageUrl: string;
+  status: string;
+  reservePrice: number;
+  soldAmount: number;
+  currentHighBid: number;
+  id: string;
+};
+
+export type Bid = {
+  id: string;
+  auctionId: string;
+  bidder: string;
+  bidTime: string;
+  amount: number;
+  bidStatus: string;
+};
+
+export type AuctionFinished = {
+    itemSold: string;
+    auctionId: string;
+    winner?: string;
+    seller: string;
+    amount?: number;
+}

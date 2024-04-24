@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\workspace\\Microservices\\Carties\\src\\NotificationService\\NotificationService.csproj": {}
+    "D:\\workspace\\C#\\Microservices\\Carties\\src\\NotificationService\\NotificationService.csproj": {}
   },
   "projects": {
-    "D:\\workspace\\Microservices\\Carties\\src\\Contracts\\Contracts.csproj": {
+    "D:\\workspace\\C#\\Microservices\\Carties\\src\\Contracts\\Contracts.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\workspace\\Microservices\\Carties\\src\\Contracts\\Contracts.csproj",
+        "projectUniqueName": "D:\\workspace\\C#\\Microservices\\Carties\\src\\Contracts\\Contracts.csproj",
         "projectName": "Contracts",
-        "projectPath": "D:\\workspace\\Microservices\\Carties\\src\\Contracts\\Contracts.csproj",
+        "projectPath": "D:\\workspace\\C#\\Microservices\\Carties\\src\\Contracts\\Contracts.csproj",
         "packagesPath": "C:\\Users\\leduc\\.nuget\\packages\\",
-        "outputPath": "D:\\workspace\\Microservices\\Carties\\src\\Contracts\\obj\\",
+        "outputPath": "D:\\workspace\\C#\\Microservices\\Carties\\src\\Contracts\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -69,14 +69,14 @@
         }
       }
     },
-    "D:\\workspace\\Microservices\\Carties\\src\\NotificationService\\NotificationService.csproj": {
+    "D:\\workspace\\C#\\Microservices\\Carties\\src\\NotificationService\\NotificationService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\workspace\\Microservices\\Carties\\src\\NotificationService\\NotificationService.csproj",
+        "projectUniqueName": "D:\\workspace\\C#\\Microservices\\Carties\\src\\NotificationService\\NotificationService.csproj",
         "projectName": "NotificationService",
-        "projectPath": "D:\\workspace\\Microservices\\Carties\\src\\NotificationService\\NotificationService.csproj",
+        "projectPath": "D:\\workspace\\C#\\Microservices\\Carties\\src\\NotificationService\\NotificationService.csproj",
         "packagesPath": "C:\\Users\\leduc\\.nuget\\packages\\",
-        "outputPath": "D:\\workspace\\Microservices\\Carties\\src\\NotificationService\\obj\\",
+        "outputPath": "D:\\workspace\\C#\\Microservices\\Carties\\src\\NotificationService\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -98,8 +98,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\workspace\\Microservices\\Carties\\src\\Contracts\\Contracts.csproj": {
-                "projectPath": "D:\\workspace\\Microservices\\Carties\\src\\Contracts\\Contracts.csproj"
+              "D:\\workspace\\C#\\Microservices\\Carties\\src\\Contracts\\Contracts.csproj": {
+                "projectPath": "D:\\workspace\\C#\\Microservices\\Carties\\src\\Contracts\\Contracts.csproj"
               }
             }
           }

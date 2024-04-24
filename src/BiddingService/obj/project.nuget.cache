@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MtSVBZHupSWihAxMZAx3D1Q47DoVU6dEd+Q2+vfl6xooFDM0lDeZOe9MJE+CvJJGakZyR0mol8t9nxw21UZT7Q==",
+  "dgSpecHash": "fxCGPZkXIL9NLJeMHVch1RKGjW68rr3fH8JeFcuI/h+2WiCo1PQFJ+8sailJlJkN4bin10EiBm5+dOXbvtwmkA==",
   "success": true,
-  "projectFilePath": "D:\\workspace\\Microservices\\Carties\\src\\BiddingService\\BiddingService.csproj",
+  "projectFilePath": "D:\\workspace\\C#\\Microservices\\Carties\\src\\BiddingService\\BiddingService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\leduc\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\leduc\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
