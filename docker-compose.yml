@@ -84,9 +84,9 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Docker
       - ASPNETCORE_URLS=http://+:80
-      - ClientApp=http://app.carstiestest.com
+      - ClientApp=http://app.carstiestest.local
       - ConnectionStrings__DefaultConnection=Server=postgres:5432;Database=identity;User Id=sa;Password=12345
-      - VIRTUAL_HOST=id.carstiestest.com
+      - VIRTUAL_HOST=id.carstiestest.local
     depends_on:
       - postgres
     networks:
@@ -100,8 +100,8 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Docker
       - ASPNETCORE_URLS=http://+:80
-      - ClientApp=https://app.carstiestest.com
-      - VIRTUAL_HOST=api.carstiestest.com
+      - ClientApp=https://app.carstiestest.local
+      - VIRTUAL_HOST=api.carstiestest.local
     networks:
       custom:
   bid-svc:
@@ -142,19 +142,19 @@ services:
     image: trycatchlearn/web-app
     build:
       context: .
-      dockerfile: fontend/web-app/Dockerfile
+      dockerfile: frontend/web-app/Dockerfile
     volumes:
       - /var/lib/web/data
     extra_hosts:
-      - id.carstiestest.com:10.5.0.200
+      - id.carstiestest.local:10.5.0.200
     environment:
       - NEXTAUTH_SECRET=somgthingreallyreallysecret
-      - NEXTAUTH_URL=http://app.carstiestest.com
+      - NEXTAUTH_URL=http://app.carstiestest.local
       - NEXTAUTH_URL_INTERNAL=http://web-app:3000
       - API_URL=http://gateway-svc
-      - ID_URL=http://id.carstiestest.com
+      - ID_URL=http://id.carstiestest.local
       - NEXT_PUBLIC_NOTIFY_URL=http://gateway-svc/notifications
-      - VIRTUAL_HOST=app.carstiestest.com
+      - VIRTUAL_HOST=app.carstiestest.local
       - VIRTUAL_PORT=3000 
     networks:
       custom:

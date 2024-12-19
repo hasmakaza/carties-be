@@ -8678,23 +8678,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\leduc\\.nuget\\packages\\": {},
+    "C:\\Users\\Admin\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\workspace\\C#\\Microservices\\Carties\\tests\\AuctionService.UnitTests\\AuctionService.UnitTests.csproj",
+      "projectUniqueName": "E:\\workspace\\C#\\Microservices\\carties-bid\\tests\\AuctionService.UnitTests\\AuctionService.UnitTests.csproj",
       "projectName": "AuctionService.UnitTests",
-      "projectPath": "D:\\workspace\\C#\\Microservices\\Carties\\tests\\AuctionService.UnitTests\\AuctionService.UnitTests.csproj",
-      "packagesPath": "C:\\Users\\leduc\\.nuget\\packages\\",
-      "outputPath": "D:\\workspace\\C#\\Microservices\\Carties\\tests\\AuctionService.UnitTests\\obj\\",
+      "projectPath": "E:\\workspace\\C#\\Microservices\\carties-bid\\tests\\AuctionService.UnitTests\\AuctionService.UnitTests.csproj",
+      "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+      "outputPath": "E:\\workspace\\C#\\Microservices\\carties-bid\\tests\\AuctionService.UnitTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\leduc\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -8710,8 +8710,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\workspace\\C#\\Microservices\\Carties\\src\\AuctionService\\AuctionService.csproj": {
-              "projectPath": "D:\\workspace\\C#\\Microservices\\Carties\\src\\AuctionService\\AuctionService.csproj"
+            "E:\\workspace\\C#\\Microservices\\carties-bid\\src\\AuctionService\\AuctionService.csproj": {
+              "projectPath": "E:\\workspace\\C#\\Microservices\\carties-bid\\src\\AuctionService\\AuctionService.csproj"
             }
           }
         }
@@ -8776,7 +8776,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
       }
     }
   }
