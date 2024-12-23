@@ -1027,11 +1027,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\workspace\\C#\\Microservices\\carties-bid\\src\\NotificationService\\NotificationService.csproj",
+      "projectUniqueName": "E:\\carties\\src\\NotificationService\\NotificationService.csproj",
       "projectName": "NotificationService",
-      "projectPath": "E:\\workspace\\C#\\Microservices\\carties-bid\\src\\NotificationService\\NotificationService.csproj",
+      "projectPath": "E:\\carties\\src\\NotificationService\\NotificationService.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "E:\\workspace\\C#\\Microservices\\carties-bid\\src\\NotificationService\\obj\\",
+      "outputPath": "E:\\carties\\src\\NotificationService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1053,8 +1053,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "E:\\workspace\\C#\\Microservices\\carties-bid\\src\\Contracts\\Contracts.csproj": {
-              "projectPath": "E:\\workspace\\C#\\Microservices\\carties-bid\\src\\Contracts\\Contracts.csproj"
+            "E:\\carties\\src\\Contracts\\Contracts.csproj": {
+              "projectPath": "E:\\carties\\src\\Contracts\\Contracts.csproj"
             }
           }
         }

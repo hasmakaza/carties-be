@@ -8684,11 +8684,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\workspace\\C#\\Microservices\\carties-bid\\tests\\AuctionService.UnitTests\\AuctionService.UnitTests.csproj",
+      "projectUniqueName": "E:\\carties\\tests\\AuctionService.UnitTests\\AuctionService.UnitTests.csproj",
       "projectName": "AuctionService.UnitTests",
-      "projectPath": "E:\\workspace\\C#\\Microservices\\carties-bid\\tests\\AuctionService.UnitTests\\AuctionService.UnitTests.csproj",
+      "projectPath": "E:\\carties\\tests\\AuctionService.UnitTests\\AuctionService.UnitTests.csproj",
       "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-      "outputPath": "E:\\workspace\\C#\\Microservices\\carties-bid\\tests\\AuctionService.UnitTests\\obj\\",
+      "outputPath": "E:\\carties\\tests\\AuctionService.UnitTests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -8710,8 +8710,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "E:\\workspace\\C#\\Microservices\\carties-bid\\src\\AuctionService\\AuctionService.csproj": {
-              "projectPath": "E:\\workspace\\C#\\Microservices\\carties-bid\\src\\AuctionService\\AuctionService.csproj"
+            "E:\\carties\\src\\AuctionService\\AuctionService.csproj": {
+              "projectPath": "E:\\carties\\src\\AuctionService\\AuctionService.csproj"
             }
           }
         }

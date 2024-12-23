@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hutsrfSXMyJhjSasKh5KGrjDszvo2I5ig7EWidlWUK2CDLEc/aBzarlamxd0GGQznaYhtUpvx5T/Ort7Vs/Ytw==",
+  "dgSpecHash": "XNfzY8yuzW2rR5ZHTfvoRhjBaHFHVDolHYZEe/KfQJ+hbdd2MOSyKxzLssMRVACwY2/gNBj3Dk+r6YNoSBsWkg==",
   "success": true,
-  "projectFilePath": "E:\\workspace\\C#\\Microservices\\carties-bid\\tests\\AuctionService.IntegrationTests\\AuctionService.IntegrationTests.csproj",
+  "projectFilePath": "E:\\carties\\tests\\AuctionService.IntegrationTests\\AuctionService.IntegrationTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

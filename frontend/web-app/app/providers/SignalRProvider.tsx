@@ -19,7 +19,7 @@ export default function SignalRProvider({ children, user }: Props) {
   const addBids = useBidStore((state) => state.addBid);
   const apiUrl = process.env.NODE_ENV !== "production"
   ? process.env.NEXT_PUBLIC_NOTIFY_URL
-  : "https://api.carstiestest.com/notifications"
+  : "http://localhost:6001/notifications"
   useEffect(() => {
     const newConnection = new HubConnectionBuilder()
       .withUrl(apiUrl!)

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "CQap8Lotu5UWoY49586pWGMy6LWj1JUQkpZZosThTTOFPpt5ApN7Mss6u7IN5ifXCTd/moUievvUBibZ9pgjgA==",
+  "dgSpecHash": "FiU5/2jJexYQ6vRavo36evBGDTyPoOIKhuFxcyRgIxEgvQ+LR+Y/RvAYnSlVaM0d34ZI2FXPUyoVwEhaK+4CoQ==",
   "success": true,
-  "projectFilePath": "E:\\workspace\\C#\\Microservices\\carties-bid\\tests\\AuctionService.UnitTests\\AuctionService.UnitTests.csproj",
+  "projectFilePath": "E:\\carties\\tests\\AuctionService.UnitTests\\AuctionService.UnitTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Admin\\.nuget\\packages\\autofixture\\4.18.1\\autofixture.4.18.1.nupkg.sha512",
     "C:\\Users\\Admin\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
